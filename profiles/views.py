@@ -13,4 +13,3 @@ class ProfileList(APIView):
         profiles = Profile.objects.all()
         serializer = ProfileSerializer(profiles, many=True)
         return Response(serializer.data)
-# Create your views here.
