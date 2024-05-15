@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
-from .models import Like
-from .serializers import LikeSerializer
+from likes.models import Like
+from likes.serializers import LikeSerializer
 
 
 class LikeList(generics.ListCreateAPIView):
