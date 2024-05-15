@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
 from followers.models import Follower
-from followers.serializers import FollowerSerializerSerializer
+from followers.serializers import FollowerSerializer
 
 class FollowerList(generics.ListCreateAPIView):
     serializer_class = FollowerSerializer
