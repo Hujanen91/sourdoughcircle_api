@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class ContactForm(models.Model):
+class Contact(models.Model):
     """
     Model to handle the contact form
     submission.
@@ -14,8 +14,12 @@ class ContactForm(models.Model):
     subject = models.CharField(max_length=255)
     email = models.EmailField()
     message = models.TextField(max_length=700)
+    created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
     admin_response = models.TextField(blank=True, null=True)
     
+    class Meta:
+        ordering = ["-created_at"]
+    
     def __str__(self):
-        return f"Message from {self.name}"
+        return f"Message from {self.name} : {self.subject}"

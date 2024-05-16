@@ -62,9 +62,10 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),
                  'localhost',
-                 '8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu111.gitpod.io']
+                 '8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu111.gitpod.io',
+                 'https://8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu111.gitpod.io']
 
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu111.gitpod.io','https://*.127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
