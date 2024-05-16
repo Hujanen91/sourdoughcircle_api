@@ -11,8 +11,8 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
-    tag = serializers.SlugRelatedField(
-        queryset=Tag.objects.all(),
+    tags = serializers.SlugRelatedField(
+        queryset=Tags.objects.all(),
         slug_field='name',
         allow_null=True
     )
