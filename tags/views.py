@@ -4,6 +4,6 @@ from .serializers import TagsSerializer
 
 
 class TagsList(generics.ListAPIView):
-    queryset = Tag.objects.all()
+    queryset = Tags.objects.all()
     serializer_class = TagsSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]

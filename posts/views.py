@@ -41,7 +41,7 @@ class PostList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         tag_name = self.request.data.get('tags', None)
         if tag_name:
-            tag = Tags.objects.get(name=tag_name)
+            tags = Tags.objects.get(name=tag_name)
             serializer.save(owner=self.request.user, tags=tags)
         else:
             serializer.save(owner=self.request.user)
