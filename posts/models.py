@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from tags.models import Tags
 
 
 class Post(models.Model):
@@ -27,6 +28,7 @@ class Post(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
+    tag = models.ForeignKey(Tags, on_delete=models.SET_NULL, null=True)
     
     class Meta:
         ordering = ['-created_at']
