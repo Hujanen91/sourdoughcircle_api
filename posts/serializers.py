@@ -14,7 +14,8 @@ class PostSerializer(serializers.ModelSerializer):
     tags = serializers.SlugRelatedField(
         queryset=Tags.objects.all(),
         slug_field='name',
-        allow_null=True
+        allow_null=True,
+        required=False
     )
 
     def validate_image(self, value):
