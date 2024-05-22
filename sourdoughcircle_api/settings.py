@@ -68,6 +68,9 @@ ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),
                  'localhost',
                  '8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu114.gitpod.io',
     ]
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu114.gitpod.io','https://*.127.0.0.1']
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -198,7 +201,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/admin/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
