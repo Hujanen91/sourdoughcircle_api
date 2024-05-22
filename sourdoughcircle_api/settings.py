@@ -17,7 +17,8 @@ import dj_database_url
 import mimetypes
 
 # Code to make css load in adminportal in browser
-mimetypes.add_type("text/javascript","text/html", ".js", True)
+mimetypes.add_type("text/javascript", ".js", True)
+mimetypes.add_type("text/html", True)
 
 if os.path.exists('env.py'):
     import env
