@@ -14,10 +14,10 @@ from pathlib import Path
 import os
 import re
 import dj_database_url
-import mimetypes
+#import mimetypes
 
 # Code to make css load in adminportal in browser
-mimetypes.add_type("text/javascript", ".js", True)
+#mimetypes.add_type("text/javascript", ".js", True)
 
 if os.path.exists('env.py'):
     import env
@@ -210,3 +210,7 @@ STATIC_ROOT = 'staticfiles'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
