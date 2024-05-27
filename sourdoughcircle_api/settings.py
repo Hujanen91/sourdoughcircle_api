@@ -99,7 +99,7 @@ INSTALLED_APPS = [
     'likes',
     'followers',
     'contact',
-    'tags',
+    'category',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
@@ -214,3 +214,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
+
+# Resolve "too many connections" error from ElephantSQL
+# having to many connections open:
+DATABASES['default']['CONN_MAX_AGE'] = 0

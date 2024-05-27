@@ -2,7 +2,7 @@ from django.db.models import Count
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
-from .models import Post, Tags
+from .models import Post, Category
 from .serializers import PostSerializer
 
 
@@ -26,7 +26,7 @@ class PostList(generics.ListCreateAPIView):
         'owner__followed__owner__profile',
         'likes__owner__profile',
         'owner__profile',
-        'tags',
+        'category',
     ]
     search_fields = [
         'owner__username',
@@ -39,10 +39,10 @@ class PostList(generics.ListCreateAPIView):
     ]
 
     def perform_create(self, serializer):
-        tag_name = self.request.data.get('tags', None)
-        if tag_name:
-            tags = Tags.objects.get(name=tag_name)
-            serializer.save(owner=self.request.user, tags=tags)
+        category_name = self.request.data.get('category', None)
+        if category_name:
+            category = Category.objects.get(name=category_name)
+            serializer.save(owner=self.request.user, category=category)
         else:
             serializer.save(owner=self.request.user)
 
