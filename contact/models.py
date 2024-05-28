@@ -17,9 +17,10 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
     admin_response = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         ordering = ["-created_at"]
     
     def __str__(self):
-        return f"Message from {self.name} : {self.subject}"
+        return f"Message from {self.name} : {self.subject}  || Message recieved: {self.created_at}"
