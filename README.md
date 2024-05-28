@@ -4,20 +4,28 @@
 
 SourdoughCircle is a social media platform that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
-# Live Page
-[SourdoughCircle]()
-
-![Website Mockup]()
-
 # Objective
 
+# Live Page
+[SourdoughCircle API](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/)
+
+![Website Mockup]()
 
 # React Frontend
 The repository for the frontend of the application can be found here:<br>[SourdoughCircle FrontEnd](https://github.com/Hujanen91/sourdoughcircle_frontend)
 
 ## Planning & Agile:
-This [project](https://github.com/users/Hujanen91/projects/9) was planned using Agile methodology and MoSCoW prioritization.
+The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.<br>
 
+The user stories project can be found [here](https://github.com/users/Hujanen91/projects/9) 
+
+## Labels used:
+`must have`
+`should have`
+`could have`
+`wont have`
+`admin`
+`for the future`
 <!--For this purpose, the project was illustrated by [9 initial Milestone](https://github.com/TiagoMA90/drf-api/milestones) entitled "Profiles", "Posts", "Likes", "Comments", "Followers", "Reviews", "walls", "Contacts" and "Reports"  providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to November. The Milestones were broken according to their components name.-->
 
 Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't-have".
@@ -42,13 +50,29 @@ The issues were closed and the milestones subsequently too.
 ## Relationship Diagram
 The relationship diagram between models from an individual perspective can be best defined as follows:
 
-- The [Profile](https://) flaunts the owner(OneToOne), image(ImageField), content(TextField), name(CharField), created_at(DateTimeField) and updated_at(DateTimeField)
-- A [Post](https://) created by a User Profile, features the owner(ForeignKey), created_at(DateTimeField), updated_at(DateTimeField), title(CharField), content(TextField), image(ImageField) and image_filter(CharField) once submited
-- The [Comments](https://) model takes a similar approach, inheriting the post(ForeignKey) and owner(ForeignKey), it displays the content(TextField), created_at(DateTimeField), updated_at(DateTimeField) of the comment
-- The [Like](https://) marked by the owner(ForeignKey), post(ForeignKey) and created_at(DateTimeField)
-- The [Follower](https://) defined by owner(ForeignKey), followed(ForeignKey), created_at(DateTimeField)
-- Then the [Contact](https://) functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
-- The [Category](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField).
+- The [Profile](https://) flaunts the owner(OneToOne),<br>
+ image(ImageField),<br> content(TextField),<br> name(CharField),<br> created_at(DateTimeField) and<br>updated_at(DateTimeField)
+- A [Post](https://) created by a User Profile, features: <br>
+owner(ForeignKey),<br> 
+created_at(DateTimeField),<br> 
+updated_at(DateTimeField),<br> 
+title(CharField),<br> 
+content(TextField),<br> 
+image(ImageField) and <br>
+image_filter(CharField) once submited
+- The [Comments](https://) model takes a similar approach,<br> 
+inheriting the post(ForeignKey) and owner(ForeignKey),<br> 
+it displays the content(TextField),<br>
+created_at(DateTimeField), <br>
+updated_at(DateTimeField) of the comment
+- The [Like](https://) marked by the owner(ForeignKey),<br> 
+post(ForeignKey) and <br>
+created_at(DateTimeField)
+- The [Follower](https://) defined by owner(ForeignKey),<br> 
+followed(ForeignKey),<br>
+created_at(DateTimeField)
+<!-- - Then the [Category](https://) functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
+- The [Contact](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField). -->
 
 <!--Under Barker's notation. One/Many Users can create multiple Profiles, which can then create many Posts. Many Comments can be created in many Posts by one/many Profiles. One Likes/Unlikes can be created in many Posts by one/many Profiles. Many Reports can be created on many Posts by one/many Profiles. One/Many Profiles can follow/unfollow many Profiles. Contacts should be considered an isolated model as it is accessible by anyone, ergo many Users.-->
 
@@ -181,7 +205,7 @@ The website is being hosted and deployed on Heroku:
 - Hit "Connect" and "Enable Automatic Deploys" to keep the the repository in parallel to Heroku.
 - Manually "Deploy Main Branch".
 - Upon successful deployment, retrieve the link for the mock terminal.
-- The live app can be found [here](https://djangorestframework-api-38c4a098777a.herokuapp.com/).
+- The live app can be found [here](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/).
 
 ## Languages & Technologies
 - Django REST Framework (Python Framework - API)
