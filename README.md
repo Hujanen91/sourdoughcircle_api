@@ -1,8 +1,8 @@
 # SourdoughCircle
 
-![SourdoughCircle](docs/images/bakery%20(1).png)
+![SourdoughCircle](docs/images/android-chrome-512x512.png)
 
-SourdoughCircle is a social media application that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
+SourdoughCircle is a social media platform that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
 # Live Page
 [SourdoughCircle]()
@@ -16,15 +16,14 @@ SourdoughCircle is a social media application that allows authenticated members 
 The repository for the frontend of the application can be found here:<br>[SourdoughCircle FrontEnd](https://github.com/Hujanen91/sourdoughcircle_frontend)
 
 ## Planning & Agile:
-This [project](https://github.com/users/TiagoMA90/projects/10) was planned using Agile methodology and MoSCoW prioritization.
+This [project](https://github.com/users/Hujanen91/projects/9) was planned using Agile methodology and MoSCoW prioritization.
 
-For this purpose, the project was illustrated by [9 initial Milestone](https://github.com/TiagoMA90/drf-api/milestones) entitled "Profiles", "Posts", "Likes", "Comments", "Followers", "Reviews", "walls", "Contacts" and "Reports"  providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to November. The Milestones were broken according to their components name.
+<!--For this purpose, the project was illustrated by [9 initial Milestone](https://github.com/TiagoMA90/drf-api/milestones) entitled "Profiles", "Posts", "Likes", "Comments", "Followers", "Reviews", "walls", "Contacts" and "Reports"  providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to November. The Milestones were broken according to their components name.-->
 
 Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't-have".
 
 <img src="" alt="">
 
-In order of priority, with [62 closed User Stories](https://github.com/TiagoMA90/drf-api/issues?q=is%3Aissue+is%3Aclosed), the Project has:
 
 Must-Have:
 
@@ -43,23 +42,23 @@ The issues were closed and the milestones subsequently too.
 ## Relationship Diagram
 The relationship diagram between models from an individual perspective can be best defined as follows:
 
-- The [Profile](https://djangorestframework-api-38c4a098777a.herokuapp.com/profiles/) flaunts the owner(OneToOne), image(ImageField), content(TextField), name(CharField), created_at(DateTimeField) and updated_at(DateTimeField)
-- A [Post](https://djangorestframework-api-38c4a098777a.herokuapp.com/posts/) created by a User Profile, features the owner(ForeignKey), created_at(DateTimeField), updated_at(DateTimeField), title(CharField), content(TextField), image(ImageField) and image_filter(CharField) once submited
-- The [Comments](https://djangorestframework-api-38c4a098777a.herokuapp.com/comments/) model takes a similar approach, inheriting the post(ForeignKey) and owner(ForeignKey), it displays the content(TextField), created_at(DateTimeField), updated_at(DateTimeField) of the comment
-- The [Like](https://djangorestframework-api-38c4a098777a.herokuapp.com/likes/) marked by the owner(ForeignKey), post(ForeignKey) and created_at(DateTimeField)
-- The [Follower](https://djangorestframework-api-38c4a098777a.herokuapp.com/followers/) defined by owner(ForeignKey), followed(ForeignKey), created_at(DateTimeField)
-- Then the [Report](https://djangorestframework-api-38c4a098777a.herokuapp.com/reports/) functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
-- The [Contact](https://djangorestframework-api-38c4a098777a.herokuapp.com/contacts/) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField).
+- The [Profile](https://) flaunts the owner(OneToOne), image(ImageField), content(TextField), name(CharField), created_at(DateTimeField) and updated_at(DateTimeField)
+- A [Post](https://) created by a User Profile, features the owner(ForeignKey), created_at(DateTimeField), updated_at(DateTimeField), title(CharField), content(TextField), image(ImageField) and image_filter(CharField) once submited
+- The [Comments](https://) model takes a similar approach, inheriting the post(ForeignKey) and owner(ForeignKey), it displays the content(TextField), created_at(DateTimeField), updated_at(DateTimeField) of the comment
+- The [Like](https://) marked by the owner(ForeignKey), post(ForeignKey) and created_at(DateTimeField)
+- The [Follower](https://) defined by owner(ForeignKey), followed(ForeignKey), created_at(DateTimeField)
+- Then the [Contact](https://) functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
+- The [Category](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField).
 
-Under Barker's notation. One/Many Users can create multiple Profiles, which can then create many Posts. Many Comments can be created in many Posts by one/many Profiles. One Likes/Unlikes can be created in many Posts by one/many Profiles. Many Reports can be created on many Posts by one/many Profiles. One/Many Profiles can follow/unfollow many Profiles. Contacts should be considered an isolated model as it is accessible by anyone, ergo many Users.
+<!--Under Barker's notation. One/Many Users can create multiple Profiles, which can then create many Posts. Many Comments can be created in many Posts by one/many Profiles. One Likes/Unlikes can be created in many Posts by one/many Profiles. Many Reports can be created on many Posts by one/many Profiles. One/Many Profiles can follow/unfollow many Profiles. Contacts should be considered an isolated model as it is accessible by anyone, ergo many Users.-->
 
-<img src="readme/DiagramRelationship.png" alt="Models Diagram">
+<img src="" alt="Models Diagram">
 
 ## Methodology CRUD
 When performing CRUD (Create, Retrieve, Update, Delete) function based views, the following methods were used to manipulate the table in the database.
 
 For such, to the subsequent endpoints:
-/profiles/, /posts/, /comments/, /likes/, /followers/, /reviews/, /walls/, /reports/, /contacts/
+/profiles/, /posts/, /comments/, /likes/, /followers/, /contact/, /tags/
 
 - POST - Used to create an object to a list of (endpoint)
 - GET - Used to retrieve series of objects from a list of (endpoint)
@@ -84,7 +83,7 @@ Users can then:
 
 ## Features and Functionality for Superusers
 
-As a Superuser one has the ability to perform the following via the [admin panel](https://djangorestframework-api-38c4a098777a.herokuapp.com/admin/):
+As a Superuser one has the ability to perform the following via the [admin panel](https://):
 - CRUD Posts
 - CRUD Comments
 - CRUD Profiles
@@ -95,17 +94,19 @@ As a Superuser one has the ability to perform the following via the [admin panel
 - Change Passwords
 - Promote users to Superuser
 
-<img src="readme/AdminPanel.png" alt="Admin Panel (local)">
+<img src="" alt="Admin Panel (local)">
 
 ## Manual Testing
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
 All data is CRUDed accordingly.
 
+<!-- Add manual testing gifs of admin functionality here -->
+
 CI Python Linter was also used in parallel with the development of the API, to keep the code free of errors.
 
-The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development. Test Commits were exectuted in attempts to test the responsivness with the Front and the deployed Back-end.
+<!-- The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development. Test Commits were exectuted in attempts to test the responsivness with the Front and the deployed Back-end. -->
 
-<img src="readme/CIPythonLinter.png" alt="CI Python Linter">
+<img src="" alt="CI Python Linter">
 
 ## Installed Python Packages
 The following packages were installed when developing this project:
@@ -197,5 +198,3 @@ The website is being hosted and deployed on Heroku:
 ## Credits
 The following sources and references were resorted for the creation of this website:
 - The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' specialization
-- The Tutor team provided by Code Institutes Student Support
-- Slack(#project-portfolio-5-advanced-frontend) as a solution platform for broken code and guidance on how to procceed to blockades
