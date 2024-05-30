@@ -5,4 +5,4 @@ class ContactSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Contact
-        fields = ['name', 'subject', 'email', 'message']
+        fields = ['name', 'subject', 'email', 'message', 'created_at']

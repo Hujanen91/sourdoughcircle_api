@@ -17,7 +17,7 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
     admin_response = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    
     
     class Meta:
         ordering = ["-created_at"]
