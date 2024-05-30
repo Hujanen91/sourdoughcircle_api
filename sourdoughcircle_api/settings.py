@@ -71,6 +71,13 @@ ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu114.gitpod.io','https://*.127.0.0.1']
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.outlook.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
 # Application definition
 
 INSTALLED_APPS = [

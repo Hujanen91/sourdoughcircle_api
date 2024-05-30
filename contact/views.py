@@ -1,3 +1,4 @@
+#from ..sourdoughcircle_api.settings import EMAIL_HOST_USER
 from rest_framework import generics, permissions
 from .models import Contact
 from .serializers import ContactSerializer
@@ -25,7 +26,7 @@ class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
                 send_email(
                     subject=request.data.get('Re:' 'subject'),
                     message=request.data.get('admin_response'),
-                    from_email="sourdoughcircle@no-response.com",
+                    from_email='EMAIL_HOST_USER',
                     recipient_list=[instance.email],
                     fail_silently=True,
                 )
