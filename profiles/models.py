@@ -13,6 +13,9 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../user_6_shlqba'
     )
+    facebook_link = models.URLField(blank=True)
+    twitter_link = models.URLField(blank=True)
+    linkedin_link = models.URLField(blank=True)
 
     class Meta:
         ordering = ['-created_at']
