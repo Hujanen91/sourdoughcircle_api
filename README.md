@@ -76,7 +76,7 @@ created_at(DateTimeField)
 
 <!--Under Barker's notation. One/Many Users can create multiple Profiles, which can then create many Posts. Many Comments can be created in many Posts by one/many Profiles. One Likes/Unlikes can be created in many Posts by one/many Profiles. Many Reports can be created on many Posts by one/many Profiles. One/Many Profiles can follow/unfollow many Profiles. Contacts should be considered an isolated model as it is accessible by anyone, ergo many Users.-->
 
-<img src="" alt="Models Diagram">
+<img src="docs/images/sourdoughcircle.drawio.png" alt="Models Diagram">
 
 ## Methodology CRUD
 When performing CRUD (Create, Retrieve, Update, Delete) function based views, the following methods were used to manipulate the table in the database.
