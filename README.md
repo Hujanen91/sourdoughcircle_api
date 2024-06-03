@@ -98,8 +98,9 @@ Community chat [#46]()<br>
 ## Relationship Diagram
 The relationship diagram between models from an individual perspective can be best defined as follows:
 
-- The [Profile](https://) flaunts the owner(OneToOne),<br>
+- The [Profile](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/profiles/models.py) flaunts the owner(OneToOne),<br>
  image(ImageField),<br> content(TextField),<br> name(CharField),<br> created_at(DateTimeField) and<br>updated_at(DateTimeField)
+
 - A [Post](https://) created by a User Profile, features: <br>
 owner(ForeignKey),<br> 
 created_at(DateTimeField),<br> 
@@ -108,21 +109,40 @@ title(CharField),<br>
 content(TextField),<br> 
 image(ImageField) and <br>
 image_filter(CharField) once submited
+
 - The [Comments](https://) model takes a similar approach,<br> 
 inheriting the post(ForeignKey) and owner(ForeignKey),<br> 
 it displays the content(TextField),<br>
 created_at(DateTimeField), <br>
 updated_at(DateTimeField) of the comment
+
 - The [Like](https://) marked by the owner(ForeignKey),<br> 
 post(ForeignKey) and <br>
 created_at(DateTimeField)
+
 - The [Follower](https://) defined by owner(ForeignKey),<br> 
 followed(ForeignKey),<br>
 created_at(DateTimeField)
-<!-- - Then the [Category](https://) functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
-- The [Contact](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField). -->
+- Then the [Category](https://)
+ functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
 
-<!--Under Barker's notation. One/Many Users can create multiple Profiles, which can then create many Posts. Many Comments can be created in many Posts by one/many Profiles. One Likes/Unlikes can be created in many Posts by one/many Profiles. Many Reports can be created on many Posts by one/many Profiles. One/Many Profiles can follow/unfollow many Profiles. Contacts should be considered an isolated model as it is accessible by anyone, ergo many Users.-->
+- The [Contact](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField).
+
+***
+<br>
+
+Under Barker's notation:
+One/Many Users can create multiple <i>Profiles</i>, which can then create many <i>Posts</i>.
+
+Many <i>Comments</i> can be created in many <i>Posts</i> by one/many <i>Profiles</i>. 
+
+One <i>Likes/Unlikes</i> can be created in many <i>Posts</i> by one/many <i>Profiles</i>.
+
+One/Many <i>Profiles</i> can follow/unfollow many <i>Profiles</i>.
+
+One <i>Category</i> can be connected to many <i>Posts</i>.
+
+<i>Contacts</i> should be considered an isolated model as it is accessible by anyone, ergo many users.
 
 <img src="docs/images/sourdoughcircle.drawio.png" alt="Models Diagram">
 
