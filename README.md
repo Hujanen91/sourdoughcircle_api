@@ -99,16 +99,26 @@ Community chat [#46]()<br>
 The relationship diagram between models from an individual perspective can be best defined as follows:
 
 - The [Profile](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/profiles/models.py) flaunts the owner(OneToOne),<br>
- image(ImageField),<br> content(TextField),<br> name(CharField),<br> created_at(DateTimeField) and<br>updated_at(DateTimeField)
+ created_at(DateTimeField),<br>
+ updated_at(DateTimeField),<br>
+ name(CharField),<br>
+ email(EmailField),<br>
+ content(TextField),<br>
+ image(ImageField),<br>
+ facebook_link(URLField),<br>
+ twitter_link(URLField) and<br>
+ instagram_field(URLField)<br>
 
-- A [Post](https://) created by a User Profile, features: <br>
+- A [Post](https://github.com/Hujanen91/sourdoughcircle_api/tree/main/posts) 
+created by a User Profile, features:<br>
 owner(ForeignKey),<br> 
 created_at(DateTimeField),<br> 
 updated_at(DateTimeField),<br> 
 title(CharField),<br> 
-content(TextField),<br> 
-image(ImageField) and <br>
-image_filter(CharField) once submited
+content(TextField),<br>
+image(ImageField),<br>
+image_filter(CharField) once submited and<br>
+category(ForeignKey)<br>
 
 - The [Comments](https://) model takes a similar approach,<br> 
 inheriting the post(ForeignKey) and owner(ForeignKey),<br> 
