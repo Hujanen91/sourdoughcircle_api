@@ -206,7 +206,6 @@ As a Superuser one has the ability to perform the following via the admin panel:
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
 All data is CRUDed accordingly.
 
-<!-- Add manual testing gifs of admin functionality here -->
 
 CI Python Linter was also used in parallel with the development of the API, to keep the code free of errors.
 
@@ -217,30 +216,30 @@ CI Python Linter was also used in parallel with the development of the API, to k
 ## Installed Python Packages
 The following packages were installed when developing this project:
 To install, the following command ran: ```pip install``` ...
-- ```Pillow==8.2.0``` <- Python Imaging Library
-- ```psycopg2==2.9.6``` <- PostgreSQL adapter for Python
-- ```cloudinary==1.25.0``` <- Cloudinary - cloud-based image and video host
+- ```cloudinary==1.40.0``` <- Cloudinary - cloud-based image and video host
 - ```dj-database-url==0.5.0``` <- Utility library for Django
 - ```dj-rest-auth==2.1.9``` <- Authentication functionality for DjangoRESTFramework-based APIs
-- ```Django==3.2.4``` <- Python web framework
+- ```Django==4.2``` <- Python web framework
 - ```django-allauth==0.44.0``` <- Extension for Django to a customizable authentication system
 - ```django-cloudinary-storage==0.3.0``` <- Cloudinary - Backend storage for static media files
 - ```django-cors-headers==3.7.0``` <- Middleware Cross-Origin Resource Sharing (CORS)
 - ```django-filter==2.4.0``` <- Package to simplify filtering QuerySets
-- ```djangorestframework==3.12.4``` <- Toolkit for building Web APIs
-- ```djangorestframework-simplejwt==4.7.2``` <- Extension that provides JSON Web Token (JWT) authentication
-- ```gunicorn==20.1.0``` <- WSGI HTTP server for running Python web applications
-- ```PyJWT==2.1.0``` <- Library for working with JSON Web Tokens (JWT)
+- ```django-heroku==0.3.1``` <- Python package toolkit to make deployment to Heroku easier. Was installed primary to fix issues with the css and js not working on admin panel.
+- ```djangorestframework==3.15.1``` <- Toolkit for building Web APIs
+- ```djangorestframework-simplejwt==5.3.1``` <- Extension that provides JSON Web Token (JWT) authentication
+- ```gunicorn==22.0.0``` <- WSGI HTTP server for running Python web applications
+- ```Pillow==10.3.0``` <- Python Imaging Library
+- ```psycopg2==2.9.9``` <- PostgreSQL adapter for Python
+- ```PyJWT==2.8.0``` <- Library for working with JSON Web Tokens (JWT)
 
 ## Package Dependencies
-- asgiref==3.3.4
-- cryptography==3.4.8
-- oauthlib==3.1.1
+- asgiref==3.8.1
+- oauthlib==3.2.2
 - python3-openid==3.2.0
-- pytz==2021.1
-- requests-oauthlib==1.3.0
-- sqlparse==0.4.1
-- urllib3==1.26.15
+- pytz==2024.1
+- requests-oauthlib==2.0.0
+- sqlparse==0.5.0
+- whitenoise==6.6.0
 
 # Development & Deployment
 The project was developed using GitHub and GitPod platforms...
