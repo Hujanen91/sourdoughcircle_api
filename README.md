@@ -296,6 +296,8 @@ To create a new Django project, in the currenct directory, the followig command 
 To create the app the following command ran:
 - ```python3 manage.py startapp NAMOFTHEAPP``` <- Creates a folder for the app withing the project
 - 
+
+## Heroku
 The website is being hosted and deployed on Heroku:
 - Navigate to: "Create new app" add a unique name "djangorestframework-api" and select your region. Click "Create App"
 - Head over to "Settings" tab and apply the respective config VARs
@@ -305,6 +307,18 @@ The website is being hosted and deployed on Heroku:
 - Manually "Deploy Main Branch".
 - Upon successful deployment, retrieve the link for the mock terminal.
 - The live app can be found [here](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/).
+
+## Forking
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+- Navigate to the GitHub Repository you want to 
+  fork.
+
+- On the top right of the page under the header, 
+  click the fork button.
+
+- This will create a duplicate of the full 
+  project in your GitHub Repository.
 
 ## Languages & Technologies
 - Django REST Framework (Python Framework - API)
