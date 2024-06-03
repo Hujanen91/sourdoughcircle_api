@@ -216,6 +216,21 @@ CI Python Linter was also used in parallel with the development of the API, to k
 <img src="" alt="CI Python Linter">
 
 ## Future Improvements
+<b>Communication with user and admin:</b><br>
+
+Add functions in Contact to make it able for admin to use the admin response field properly. This was not implemented fully in this project due to me not having enough time to try to make it work.<br>
+
+<b>Community Chat:</b><br>
+A community live chat displayed at all times on all pages of the website could be added in the future to make communication easier and more fun.
+
+<b>Bookmarks:</b><br>
+To make it easier for the user to save posts they like.
+
+<b>Direct message:</b><br>
+A fun way to communicate with other users, could also be used for easier communication with the admins instead of using direct emails.
+
+<b>Notifications:</b><br>
+Notifications for when the user gets likes, comments or even for admins to send out news alerts would make it easier to keep track of whats happening on every users account.
 
 
 ## Installed Python Packages
