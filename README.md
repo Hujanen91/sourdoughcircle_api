@@ -17,16 +17,17 @@ SourdoughCircle is a social media platform that allows authenticated members to 
   * [Relationship Diagram](#Relationship-Diagram)
   * [Methodology CRUD](#Methodology-CRUD)
   * [Features and Functionality for Superusers](#Features-and-Functionality-for-Superusers)
-* [Manual Testing](#Manual-Testing)
+* [Manual Testing](#Manual-testing)
   * [Future Improvements](#Future-Improvements)
-  * [Installed python packages](#Installed-python-packages)
+  * [Installed Python Packages](#Installed-Python-Packages)
   * [Package Dependencies](#Package-Dependencies)
 * [Development and Deployment](#Development-and-Deployment)
   * [Heroku](#Heroku)
   * [Forking](#Forking)
   * [Languages and Technologies](#Languages-and-Technologies)
   * [Other forms of development](#Other-forms-of-development)
-* [Credits](#credits)
+* [Credits](#Credits)
+  * [Media](#Media)
 * [Acknowledgements](#Acknowledgements)
 
 ## Objective
@@ -368,7 +369,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - This will create a duplicate of the full 
   project in your GitHub Repository.
 
-## Languages & Technologies
+## Languages and Technologies
 - Django REST Framework (Python Framework - API)
 
 ## Other forms of development
@@ -380,6 +381,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
 
 # Credits
+
 The following sources and references were resorted for the creation of this website:
 
 - The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' specialization
@@ -395,8 +397,14 @@ https://www.flaticon.com
 [TiagoMA90](https://github.com/TiagoMA90),<br>
 [Cushione](https://github.com/Cushione)
 
+## Media:
+- SourdoughCircle icons:
+https://www.flaticon.com/authors/mangsaabguru
+- Other Icons:
+https://www.flaticon.com
 
-# Acknowledgements:
+
+# Acknowledgements
 - My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project and all my other projects in this entire course at Code Institute.
 
 - The Code Institute community at Slack that always have people ready to help and more specific the #community-sweden channel with all the amazing people that I have both talked to in the channels but also met in real life for some irl study sessions, you guys are amazing and made this entire course easier and more fun to push through!
