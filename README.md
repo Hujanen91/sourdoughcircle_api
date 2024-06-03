@@ -17,6 +17,28 @@ The repository for the frontend of the application can be found here:<br>[Sourdo
 
 
 # Planning & Agile:
+
+## Design:
+The website was crafted to provide a visually appealing and user-friendly experience for sharing, liking, commenting, navigating, and browsing images of sourdough baked goods.
+All the components are easely accessed and lets users perform all CRUD functionalities for everything they create on the site such as Comments, Likes, Profiles, Posts etc.
+
+The Icons are playful and cartoonish to create a fun feeling of the site and the colors go hand in hand with the colors of the bread icons related to sourdough.
+
+## Wireframes:
+### Homescreen/Feed
+![Home](/docs/images/wireframes/Home.png)
+### Liked posts page
+![Liked](/docs/images/wireframes/Liked.png)
+### Login page
+![Login](/docs/images/wireframes/Login.png)
+### Profile page
+![Profile](/docs/images/wireframes/Profile.png)
+### Saved posts page (was later removed during planning)
+![Saved](/docs/images/wireframes/Saved.png)
+### Signup page
+![Sign up](/docs/images/wireframes/Singup.png)
+
+## Agile:
 The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.<br>
 
 The user stories project can be found [here](https://github.com/users/Hujanen91/projects/9) 
