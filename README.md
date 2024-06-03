@@ -190,18 +190,17 @@ Users can then:
 
 ## Features and Functionality for Superusers
 
-As a Superuser one has the ability to perform the following via the [admin panel](https://):
+As a Superuser one has the ability to perform the following via the admin panel:
 - CRUD Posts
 - CRUD Comments
 - CRUD Profiles
-- CRUD Reviews
-- CRUD Walls
 - CRUD Contacts
-- CRUD Reports
+- CRUD Category
 - Change Passwords
+- Change emails
 - Promote users to Superuser
 
-<img src="" alt="Admin Panel (local)">
+<img src="docs/images/screenshots/Admin-panel.png" alt="Admin Panel (local)">
 
 ## Manual Testing
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
