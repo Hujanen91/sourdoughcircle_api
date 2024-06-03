@@ -202,7 +202,9 @@ As a Superuser one has the ability to perform the following via the admin panel:
 
 <img src="docs/images/screenshots/Admin-panel.png" alt="Admin Panel (local)">
 
-## Manual Testing
+# Manual Testing
+
+<!-- Add Manual testing cases here with more detailed descriptions -->
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
 All data is CRUDed accordingly.
 
@@ -212,6 +214,9 @@ CI Python Linter was also used in parallel with the development of the API, to k
 <!-- The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development. Test Commits were exectuted in attempts to test the responsivness with the Front and the deployed Back-end. -->
 
 <img src="" alt="CI Python Linter">
+
+## Future Improvements
+
 
 ## Installed Python Packages
 The following packages were installed when developing this project:
@@ -244,12 +249,11 @@ To install, the following command ran: ```pip install``` ...
 # Development & Deployment
 The project was developed using GitHub and GitPod platforms...
 - Navigate to: "Repositories" and create "New".
-- Mark the following fields: ✓ Public ✓ Add a README file.
-- Select template: "Code-Institute-Org/python-essentials-template".
-- Add a Repository name: "drf-api".
+- Mark the following field: ✓ Public
+- Select template: "Code-Institute-Org/react-ci-template".
+- Add a Repository name: "sourdoughcircle-api".
 - ...and create Repository.
 
-... and suffered various executions using the inbuild Terminal.
 
 For Commits on this project, the following commands ran:
 - ```git add .``` <- Stages before commiting.
@@ -278,8 +282,7 @@ To create the app the following command ran:
 - ```python3 manage.py startapp NAMOFTHEAPP``` <- Creates a folder for the app withing the project
 - 
 The website is being hosted and deployed on Heroku:
-- After creating an Heroku Free account, and applying for Student Pack
-- Navigate to: "Create new app" add a unique name "djangorestframework-api" and select "Europe" region. Click "Create App"
+- Navigate to: "Create new app" add a unique name "djangorestframework-api" and select your region. Click "Create App"
 - Head over to "Settings" tab and apply the respective config VARs
 - Move to "Deploy" section and select "Github" method"
 - From here search for the repository name "connect", from the GitHub account.
@@ -292,7 +295,6 @@ The website is being hosted and deployed on Heroku:
 - Django REST Framework (Python Framework - API)
 
 ## Other forms of development
-- [CI Python Linter](https://pep8ci.herokuapp.com/) - CI Python testing tool
 - [Diagrams](https://app.diagrams.net/) - Diagram set up
 - [Github](https://github.com/) - Host for the repository
 - [Gitpod](https://gitpod.io/) - Code editor
@@ -302,4 +304,22 @@ The website is being hosted and deployed on Heroku:
 
 ## Credits
 The following sources and references were resorted for the creation of this website:
+
 - The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' specialization
+- contact response code API:
+https://stackoverflow.com/questions/68092438/def-update-creates-a-new-one-but-does-not-update-django
+- SourdoughCircle icons:
+https://www.flaticon.com/authors/mangsaabguru
+- Other Icons:
+https://www.flaticon.com
+- I have been getting insperation from following users:<br>
+[Gareth McGirr](https://github.com/Gareth-McGirr),<br>
+[Hannibani](https://github.com/Haniibani),<br>
+[TiagoMA90](https://github.com/TiagoMA90),<br>
+[Cushione](https://github.com/Cushione)
+
+
+## A big thank you to:
+- My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project and all my other projects in this entire course at Code Institute.
+
+- The Code Institute community at Slack that always have people ready to help and more specific the #community-sweden channel with all the amazing people that I have both talked to in the channels but also met in real life for some irl study sessions, you guys are amazing and made this entire course easier and more fun to push through!
