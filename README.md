@@ -1,20 +1,22 @@
-# SourdoughCircle
+# SourdoughCircle API
 
-![SourdoughCircle](docs/images/android-chrome-512x512.png)
-
+![SourdoughCircle](docs/images/android-chrome-192x192.png)<br>
 SourdoughCircle is a social media platform that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
-# Objective
+## Objective
+This is the API for the SourdoughCircle FrontEnd application.
+Here the backend information such as users, profiles, posts, comments, likes, categories etc are stored.
 
-# Live Page
-[SourdoughCircle API](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/)
-
-![Website Mockup]()
-
-# React Frontend
+### React Frontend
 The repository for the frontend of the application can be found here:<br>[SourdoughCircle FrontEnd](https://github.com/Hujanen91/sourdoughcircle_frontend)
 
-## Planning & Agile:
+## Live Page
+[SourdoughCircle API](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/)
+
+![API Preview](docs/images/screenshots/API-preview.png)
+
+
+# Planning & Agile:
 The API and Frontend of this project was planned using Agile methodology and MoSCoW prioritization on github projects.<br>
 
 The user stories project can be found [here](https://github.com/users/Hujanen91/projects/9) 
@@ -32,17 +34,37 @@ Throughout the development process, new milestones were added, where tasks start
 
 <img src="" alt="">
 
+## User Stories
+### `Must-Have`:<br>
+Follow/Unfollow [#17](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/17)<br>
+Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)<br>
+Authentication: Sign up [#8]()<br>
+Authentication: Sign in [#9]()<br>
+Authentication: Refreshing access tokens [#10]()<br>
+Routing [#11]()<br>
+Navigation: Conditional rendering [#13]()<br>
+Edit profile [#14]()<br>
+Update username and profile [#16]()<br>
+Edit post [#18]()<br>
+Create a comment [#19]()<br>
+Create posts [#20]()<br>
+Post page [#21]()<br>
+View recent posts [#28]()<br>
+Like a post [#29]()<br>
+Delete comments [#32]()<br>
+View comments [#33]()<br>
+View a post [#35]()<br>
+Navigation [#36]()<br>
 
-Must-Have:
+### `Should-Have`:<br>
+User profile stats [#12]()<br>
+
+### `Could-Have`:<br>
 
 
-Should-Have:
+### `Wont-Have`:<br>
 
-
-Could-Have:
-
-
-Wont-Have:
+### `Future implementation`:<br>
 
 
 The issues were closed and the milestones subsequently too.
