@@ -26,13 +26,14 @@ The user stories project can be found [here](https://github.com/users/Hujanen91/
 `should have`
 `could have`
 `wont have`
-`admin`
-`for the future`
-<!--For this purpose, the project was illustrated by [9 initial Milestone](https://github.com/TiagoMA90/drf-api/milestones) entitled "Profiles", "Posts", "Likes", "Comments", "Followers", "Reviews", "walls", "Contacts" and "Reports"  providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to November. The Milestones were broken according to their components name.-->
+`future implementation`
+`has been implemented`<br>
 
-Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have" and "won't-have".
+For this purpose, the project was illustrated by [13 initial Milestone](https://github.com/Hujanen91/sourdoughcircle_frontend/milestones) entitled "Profiles", "Posts", "Likes", "Comments", "Category", "Followers", "Admin", "Contact", "Community Chat", "Authentication", "Routing", "Notifications" and "Navigation" providing the developer with the freedom to accomplish all issues/tasks flexibly before dates deadline set to June. The Milestones were broken according to their components name main functions.
 
-<img src="" alt="">
+Throughout the development process, new milestones were added, where tasks started from "Todo," progressing to "In Progress," and finally "Done". The issues were assigned to the sole developer and labeled as "could-have," "should-have,", "must-have", "won't-have" and later on labels like "has been implemented" and "future implementation" was also added.
+
+![Project planning](docs/images/screenshots/Userstories_planning.png)
 
 ## User Stories
 ### `Must-Have`:<br>
@@ -58,16 +59,41 @@ Navigation [#36]()<br>
 
 ### `Should-Have`:<br>
 User profile stats [#12]()<br>
+View specific users posts [#15]()<br>
+Profile page [#7]()<br>
+Basic profile information [#22]()<br>
+View liked posts [#23]()<br>
+Avatar [#26]()<br>
+Comment date [#27]()<br>
+View posts of followed users [#30]()<br>
+Infinite scroll [#31]()<br>
+Search posts [#34]()<br>
+Social media links in profile [#39]()<br>
+Follow/Unfollow [#17](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/17)<br>
+Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)<br>
+Admin - Respond to user mail [#40]()<br>
+Contactpage [#38]()<br>
 
 ### `Could-Have`:<br>
+Contactpage [#38]()<br>
+Replying to comments [#44]()<br>
+User - Email communication [#41]()<br>
+Admin - Email communication [#42]()<br>
+Notifications [#43]()<br>
+Most followed profiles [#24]()<br>
+Categories [#37]()<br>
+Most liked posts [#45]()<br>
+
+### `Wont-Have` & `Future implementation`:<br>
+Replying to comments [#44]()<br>
+User - Email communication [#41]()<br>
+Admin - Email communication [#42]()<br>
+Notifications [#43]()<br>
+Admin - Respond to user mail [#40]()<br>
+Community chat [#46]()<br>
 
 
-### `Wont-Have`:<br>
-
-### `Future implementation`:<br>
-
-
-The issues were closed and the milestones subsequently too.
+<b>The issues were closed and the milestones subsequently too.</b>
 
 ## Relationship Diagram
 The relationship diagram between models from an individual perspective can be best defined as follows:
