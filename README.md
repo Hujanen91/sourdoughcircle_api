@@ -3,6 +3,32 @@
 ![SourdoughCircle](docs/images/android-chrome-192x192.png)<br>
 SourdoughCircle is a social media platform that allows authenticated members to post images and share their content related to sourdough with other people. Members can post, like posts, comment on posts, and also edit and delete their posts. Members can also follow other members to create a personalized feed.
 
+## Table of Contents
+* [SourdoughCircle API](#Sourdoughcircle-api)
+  * [Objective](#Objective)
+    * [React Frontend](#React-Frontend)
+  * [Live page](#Live-Page)
+* [Planning & Agile](#Planning-and-Agile)
+  * [Design](#Design)
+  * [Wireframes](#Wireframes)
+  * [Agile](#Agile)
+  * [Labels used](#Labels-used)
+  * [User stories](#User-stories)
+  * [Relationship Diagram](#Relationship-Diagram)
+  * [Methodology CRUD](#Methodology-CRUD)
+  * [Features and Functionality for Superusers](#Features-and-Functionality-for-Superusers)
+* [Manual Testing](#Manual-Testing)
+  * [Future Improvements](#Future-Improvements)
+  * [Installed python packages](#Installed-python-packages)
+  * [Package Dependencies](#Package-Dependencies)
+* [Development and Deployment](#Development-and-Deployment)
+  * [Heroku](#Heroku)
+  * [Forking](#Forking)
+  * [Languages and Technologies](#Languages-and-Technologies)
+  * [Other forms of development](#Other-forms-of-development)
+* [Credits](#credits)
+* [Acknowledgements](#Acknowledgements)
+
 ## Objective
 This is the API for the SourdoughCircle FrontEnd application.
 Here the backend information such as users, profiles, posts, comments, likes, categories etc are stored.
@@ -16,7 +42,7 @@ The repository for the frontend of the application can be found here:<br>[Sourdo
 ![API Preview](docs/images/screenshots/API-preview.png)
 
 
-# Planning & Agile:
+# Planning and Agile
 
 ## Design:
 The website was crafted to provide a visually appealing and user-friendly experience for sharing, liking, commenting, navigating, and browsing images of sourdough baked goods.
@@ -283,7 +309,7 @@ To install, the following command ran: ```pip install``` ...
 - sqlparse==0.5.0
 - whitenoise==6.6.0
 
-# Development & Deployment
+# Development and Deployment
 The project was developed using GitHub and GitPod platforms...
 - Navigate to: "Repositories" and create "New".
 - Mark the following field: ✓ Public
@@ -353,7 +379,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - [Cloudinary](https://cloudinary.com/) - Static & Media host
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
 
-## Credits
+# Credits
 The following sources and references were resorted for the creation of this website:
 
 - The lessons and tutorials provided by Code Institute, on the final module entitled "Django REST Framework" for the 'Advanced Front-End' specialization
@@ -370,7 +396,7 @@ https://www.flaticon.com
 [Cushione](https://github.com/Cushione)
 
 
-## A big thank you to:
+# Acknowledgements:
 - My mentor [Gareth McGirr](https://github.com/Gareth-McGirr) for his continuing support and great advice throughout this project and all my other projects in this entire course at Code Institute.
 
 - The Code Institute community at Slack that always have people ready to help and more specific the #community-sweden channel with all the amazing people that I have both talked to in the channels but also met in real life for some irl study sessions, you guys are amazing and made this entire course easier and more fun to push through!
