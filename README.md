@@ -167,13 +167,13 @@ One <i>Category</i> can be connected to many <i>Posts</i>.
 When performing CRUD (Create, Retrieve, Update, Delete) function based views, the following methods were used to manipulate the table in the database.
 
 For such, to the subsequent endpoints:
-/profiles/, /posts/, /comments/, /likes/, /followers/, /contact/, /tags/
+/profiles/, /posts/, /comments/, /likes/, /followers/, /contact/, /category/
 
 - POST - Used to create an object to a list of (endpoint)
 - GET - Used to retrieve series of objects from a list of (endpoint)
 
 Singularly, for the same endpoints past the primary keys:
-/profiles/int:pk/, /posts/int:pk/int:pk/, /comments/int:pk/, /likes/int:pk/, /followers/int:pk/, /reviews/int:pk/, /walls/int:pk/, /reports/int:pk/, /contacts/int:pk/
+/profiles/int:pk/, /posts/int:pk/int:pk/, /comments/int:pk/, /likes/int:pk/, /followers/int:pk/, /contact/int:pk/, category/
 
 - GET - Used to view a single object in a list or (endpoint)
 - PUT - Used to update a single object in a list of (endpoint)
@@ -185,10 +185,8 @@ Users can then:
 - CRUD Comments
 - CRUD Likes
 - CRUD Followers
-- CRU Reviews
-- CRU Walls
-- CR Reports
 - CR Contacts
+- R Category
 
 ## Features and Functionality for Superusers
 
