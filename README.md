@@ -109,7 +109,7 @@ The relationship diagram between models from an individual perspective can be be
  twitter_link(URLField) and<br>
  instagram_field(URLField)<br>
 
-- A [Post](https://github.com/Hujanen91/sourdoughcircle_api/tree/main/posts) 
+- A [Post](https://github.com/Hujanen91/sourdoughcircle_api/tree/main/posts/models.py) 
 created by a User Profile, features:<br>
 owner(ForeignKey),<br> 
 created_at(DateTimeField),<br> 
@@ -120,23 +120,30 @@ image(ImageField),<br>
 image_filter(CharField) once submited and<br>
 category(ForeignKey)<br>
 
-- The [Comments](https://) model takes a similar approach,<br> 
+- The [Comments](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/comments/models.py) model takes a similar approach,<br> 
 inheriting the post(ForeignKey) and owner(ForeignKey),<br> 
 it displays the content(TextField),<br>
 created_at(DateTimeField), <br>
 updated_at(DateTimeField) of the comment
 
-- The [Like](https://) marked by the owner(ForeignKey),<br> 
+- The [Likes](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/likes/models.py) marked by the owner(ForeignKey),<br> 
 post(ForeignKey) and <br>
 created_at(DateTimeField)
 
-- The [Follower](https://) defined by owner(ForeignKey),<br> 
+- The [Follower](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/followers/models.py) defined by owner(ForeignKey),<br> 
 followed(ForeignKey),<br>
 created_at(DateTimeField)
-- Then the [Category](https://)
- functionality enlists a tuples for REASON_CHOICES, followed by the reporter(ForeignKey) and post(ForeignKey), reason(CharField), description(TextField) and created_at(DateTimeField)
 
-- The [Contact](https://) form finally isolated makes use of the name(CharField) and email(EmailField) for external users, subject(Charfield), message(TextField), created_at(DateTimeField).
+- Then the [Category](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/category/models.py)<br>
+ name(CharField) stores the categories added in the api to fetch in the frontend of the application to be used as one category to many posts.
+
+- The [Contact](https://github.com/Hujanen91/sourdoughcircle_api/blob/main/contact/models.py) form finally isolated makes use of the name(CharField) and<br>
+email(EmailField), <br>
+subject(Charfield),<br> 
+message(TextField),<br>
+created_at(DateTimeField),<br>
+read(BooleanField),<br>
+admin_response(TextField)
 
 ***
 <br>
