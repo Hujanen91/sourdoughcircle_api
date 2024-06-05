@@ -11,6 +11,8 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
+    category_name = serializers.SerializerMethodField()
+    
     category = serializers.SlugRelatedField(
         queryset=Category.objects.all(),
         slug_field='name',
@@ -43,6 +45,9 @@ class PostSerializer(serializers.ModelSerializer):
             ).first()
             return like.id if like else None
         return None
+    
+    def get_category_name(self, obj):
+        return obj.category.name if obj.category else None
 
     class Meta:
         model = Post
@@ -51,5 +56,5 @@ class PostSerializer(serializers.ModelSerializer):
             'profile_image', 'created_at', 'updated_at',
             'title', 'content', 'image', 'image_filter',
             'like_id', 'likes_count', 'comments_count',
-            'category',
+            'category', 'category_name',
         ]

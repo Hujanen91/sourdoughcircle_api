@@ -28,7 +28,8 @@ class Post(models.Model):
     image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     
     class Meta:
         ordering = ['-created_at']
