@@ -23,4 +23,4 @@ class Contact(models.Model):
         ordering = ["-created_at"]
     
     def __str__(self):
-        return f"Message from {self.name} : {self.subject}  || Message recieved: {self.created_at}"
+        return f"Message from {self.name} || Message recieved: {self.created_at}"
