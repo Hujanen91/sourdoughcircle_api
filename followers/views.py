@@ -1,5 +1,7 @@
 from rest_framework import generics, permissions
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
+from posts.models import Post
+from posts.serializers import PostSerializer
 from followers.models import Follower
 from followers.serializers import FollowerSerializer
 
@@ -21,3 +23,13 @@ class FollowerDetail(generics.RetrieveDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Follower.objects.all()
     serializer_class = FollowerSerializer
+
+
+class FollowedPostsList(generics.ListAPIView):
+    serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        followed_users = Follower.objects.filter(owner=user).values_list('followed', flat=True)
+        return Post.objects.filter(owner__in=followed_users).order_by('-created_at')
