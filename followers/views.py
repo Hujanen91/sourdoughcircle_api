@@ -32,4 +32,7 @@ class FollowedPostsList(generics.ListAPIView):
     def get_queryset(self):
         user = self.request.user
         followed_users = Follower.objects.filter(owner=user).values_list('followed', flat=True)
-        return Post.objects.filter(owner__in=followed_users).order_by('-created_at')
+        return Post.objects.filter(owner__in=followed_users) \
+                           .annotate(likes_count=Count('likes', distinct=True)) \
+                           .annotate(comments_count=Count('comment', distinct=True)) \
+                           .order_by('-created_at')
