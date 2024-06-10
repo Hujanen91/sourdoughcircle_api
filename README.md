@@ -256,20 +256,22 @@ As a Superuser one has the ability to perform the following via the admin panel:
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
 All data is CRUDed accordingly.
 
-<!--Screenshots of some unauthorised unsafe request were taken in the local deployment because they cause an application error in the production deployment [Go to bugs](README.md#bugs)-->
+Screenshots have been taken borth in local production and in deployed version to display that everything is working as expected.
+The screenshots during testing is taken in local production to more specifically show the auth and unauth results for the api and to properly display that everything is working. 
+Images from the deployed api and the admin django panel can be found [here](#deployed-screens)
 
 | Testcase                                                                     | Expected Result                                                                                             | Test Result | Screenshots                                                                    |
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------       |
 | **Profiles**                                                                   |                                                                                                             |             |                                                                                     |
 | _[Profile List](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/)_                 |                                                                                                             |             |
-| GET Unauthenticated                                                          | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Screenshot](docs/testing/Profiles_list_unauth.png)                      |
-| GET Authenticated                                                            | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Screenshot](docs/testing/Profiles_list_auth.png)                  |
+| GET Unauthenticated                                                          | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Profiles-List Unauth](docs/testing/Profiles_list_unauth.png)                      |
+| GET & PUT Authenticated                                                            | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Profiles-List Auth](docs/testing/Profiles_list_auth.png)                  |
 | POST, PUT, DELETE                                                            | Not provided                                                                                                | ✅ PASS     |
 | [Profile Detail](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10/)             |                                                                                                           |             |
 | GET Unauthenticated                                                          | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_unauth.png)         |
-| GET Authenticated                                                        | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_auth.png)           |
-| POST, PUT, DELETE                                                            | Not provided                                                                                                | ✅ PASS     |                                                                      | ✅ PASS     |
-<!--| _[ Profile](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10/)_             |                                                                                                             |             |
+| GET & PUT Authenticated                                                        | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_auth.png)           |
+| POST, DELETE                                                            | Not provided                                                                                                | ✅ PASS     |                                                                      | ✅ PASS     |
+| _[ Profile](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10/)_             |                                                                                                             |             |
 | GET Authenticated                                                            | returns 200 response: returns the profile of the requesting user                                            | ✅ PASS     | [Screenshot](docs/tests/authenticated-get-profiles-user.png)             |
 | GET Unauthenticated                                                          | returns 403 error                                                                                           | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-get-profiles-user.png)           |
 | PUT Authenticated                                                            | returns 200 response: allows authenticated users to update their profile                                    | ✅ PASS     | [Screenshot](docs/tests/authenticated-put-profiles-user.png)             |
@@ -335,7 +337,53 @@ All data is CRUDed accordingly.
 | POST                                                                         | Not provided                                                                                                | ✅ PASS     |
 -->
 
+## Deployed Screens
 
+<details>
+<summary>Django admin panel</summary>
+<summary>
+<br>
+
+  - <b>Profiles</b><br>
+    The admin overview of all the profiles where admin can pick a profile and delete it (GET, POST and DELETE)
+  ![Profiles](docs/testing/Django-admin-profiles.png)
+  - <b>Profiles details</b><br>
+    Profile details, here the admin can change all the details in the profile as displayed in the image. The admin can also delete users. (GET, PUT, PATCH, DELETE)
+  ![Profiles details](docs/testing/Django-admin-profiles-detail.png)
+  - <b>Posts</b><br>
+    Postlist for admin to view and handle all the posts on the website (GET, POST and DELETE)
+  ![Posts](docs/testing/Django-admin-posts.png)
+  - <b>Posts details</b><br>
+    Post details admin view to make it easy for admin to handle the posts details. The admin can change all the details of the post and delete it if needed. (GET, PUT, PATCH and DELETE)
+  ![Posts details](docs/testing/Django-admin-posts-detail.png)
+  - <b>Likes</b><br>
+    Likes view that displays a list of the likes and what post that is liked (GET, POST, DELETE)
+  ![Likes](docs/testing/Django-admin-likes.png)
+  - <b>Likes details</b><br>
+    Details view for likes where admin can edit what posts the like should be connected to, the admin can also change user that liked and delete likes. (GET, PUT, PATCH and DELETE)
+  ![Likes details](docs/testing/Django-admin-likes-details.png)
+  - <b>Contact</b><br>
+    Contact list view of all the incoming messages from the contact form on the website. Admin can create new contact and delete existing ones. (GET, POST, DELETE)
+  ![Contact](docs/testing/Django-admin-contact.png)
+  - <b>Contact details</b><br>
+    Admin contact details where admin can read the message and it's details, edit, add new information, and delete. An admin response field is also implemented but non working at the moment, this will be a [future improvement](#future-improvements) where admin is supposed to be able to respond directly on the admin panel and the email will be sent to the email the user added to the form. (GET, PUT, PATCH and DELETE)
+  ![Contact details](docs/testing/Django-admin-contact-details.png)
+  - <b>Comments</b><br>
+    Comments list admin overview for the admin to see all the comments, add new ones and delete existing ones. (GET, POST and DELETE)
+  ![Comments](docs/testing/Django-admin-comments.png)
+  - <b>Comments details</b><br>
+    Details view for comments where admin can update all the fields needed for the comment, the admin can also delete the comment. (GET, PUT, PATCH and DELETE)
+  ![Comments details](docs/testing/Django-admin-comments-detail.png)
+  - <b>Category</b><br>
+    Category list view for admin to display all existing categories with id number and name. Admin can add new categories or delete existing ones. (GET, POST and DELETE)
+  ![Category](docs/testing/Django-admin-category.png)
+  - <b>Category details</b><br>
+    Details view for categories. The admin can update existing fields and delete if needed. (GET, PUT, PATCH and DELETE)
+  ![Category details](docs/testing/Django-admin-category-details.png)
+
+
+</summary>
+</details>
 
 CI Python Linter was also used in parallel with the development of the API, to keep the code free of errors.
 

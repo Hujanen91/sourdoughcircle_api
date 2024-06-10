@@ -21,7 +21,7 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Bearded Theme HC Wonderland Wood",
+   "workbench.colorTheme": "XD Theme",
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify"
 }
