@@ -340,9 +340,11 @@ Images from the deployed api and the admin django panel can be found [here](#dep
 ## Deployed Screens
 
 <details>
-<summary>Django admin panel</summary>
+<summary><b>Django admin panel</b></summary>
 <summary>
 <br>
+
+  An overview of the django admin panel to display the different pathways and to inform what the admin can do.
 
   - <b>Profiles</b><br>
     The admin overview of all the profiles where admin can pick a profile and delete it (GET, POST and DELETE)
@@ -381,6 +383,55 @@ Images from the deployed api and the admin django panel can be found [here](#dep
     Details view for categories. The admin can update existing fields and delete if needed. (GET, PUT, PATCH and DELETE)
   ![Category details](docs/testing/Django-admin-category-details.png)
 
+
+</summary>
+</details>
+<details>
+<summary><b>Deployed API overview</b></summary>
+<summary>
+<br>
+
+  Below are screenshots of the deployed API that displays the main overview and that the paths are working correctly and not displaying any sensitive information, the main testing was done in the local API to get more details and information when testing and can be found [here](#manual-testing) and the live API can be found [here](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com)
+
+  - [Start](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com)<br>
+    The main page of the deployed API
+  ![Start](docs/testing/Deployed-start.png)
+  - [/profiles](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles)<br>
+    The profile list on the deployed API
+  ![Profiles](docs/testing/Deployed-profiles.png)
+  - [/profiles/id](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10)<br>
+    The profile id view on the deployed API
+  ![Profiles id](docs/testing/Deployed-profiles-id.png)
+  - [/posts](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/posts)<br>
+    The posts list on the deployed API
+  ![Posts](docs/testing/Deployed-posts.png)
+  - [/posts/id](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/posts/20)<br>
+    The posts id view on the deployed API
+  ![Posts id](docs/testing/Deployed-posts-id.png)
+  - [/likes](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/likes)<br>
+    The likes list on the deployed API
+  ![Likes](docs/testing/Deployed-likes.png)
+  - [/likes/id](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/likes/23)<br>
+    The likes id view on the deployed API
+  ![Likes id](docs/testing/Deployed-likes-id.png)
+  - [/contact (authentication required to display)](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/contact)<br>
+    The contact list on the deployed API. This page should respond with non authenticated information to not give everyone access to users information and messages sent through with the contact form.
+  ![Contact](docs/testing/Deployed-contact-nonauth.png)
+  - [/contact/id (authentication required to display)](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/contact/1)<br>
+    The contact id view on the deployed API. This page should respond with non authenticated information to not give everyone access to users information and messages sent through with the contact form.
+  ![Contact id](docs/testing/Deployed-contact-id-nonauth.png)
+  - [/comments](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/comments)<br>
+    The comments list on the deployed API.
+  ![Comments](docs/testing/Deployed-comments.png)
+  - [/comments/id](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/comments/22)<br>
+    The comments id view on the deployed API.
+  ![Comments id](docs/testing/Deployed-comments-id.png)
+  - [/category](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category)<br>
+    The category list on the deployed API.
+  ![Category](docs/testing/Deployed-category.png)
+   - [/category/id](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/category/19)<br>
+    The category id view on the deployed API.
+  ![Category id](docs/testing/Deployed-category-id.png)
 
 </summary>
 </details>
