@@ -18,6 +18,8 @@ SourdoughCircle is a social media platform that allows authenticated members to 
   * [Methodology CRUD](#Methodology-CRUD)
   * [Features and Functionality for Superusers](#Features-and-Functionality-for-Superusers)
 * [Manual Testing](#Manual-testing)
+  * [Deployed Admin Screens](#deployed-admin-screens)
+  * [Validation](#validation)
   * [Future Improvements](#Future-Improvements)
   * [Installed Python Packages](#Installed-Python-Packages)
   * [Package Dependencies](#Package-Dependencies)
@@ -258,34 +260,29 @@ All data is CRUDed accordingly.
 
 Screenshots have been taken borth in local production and in deployed version to display that everything is working as expected.
 The screenshots during testing is taken in local production to more specifically show the auth and unauth results for the api and to properly display that everything is working. 
-Images from the deployed api and the admin django panel can be found [here](#deployed-screens)
+Images from the deployed api and the admin django panel can be found [here](#deployed-admin-screens)
 
 | Testcase                                                                     | Expected Result                                                                                             | Test Result | Screenshots                                                                    |
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------       |
 | **Profiles**                                                                   |                                                                                                             |             |                                                                                     |
 | _[Profile List](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/)_                 |                                                                                                             |             |
 | GET Unauthenticated                                                          | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Profiles-List Unauth](docs/testing/Profiles_list_unauth.png)                      |
-| GET & PUT Authenticated                                                            | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Profiles-List Auth](docs/testing/Profiles_list_auth.png)                  |
+| GET Authenticated                                                            | returns 200 response: a list of all the profiles                                                            | ✅ PASS     | [Profiles-List Auth](docs/testing/Profiles_list_auth.png)                  |
 | POST, PUT, DELETE                                                            | Not provided                                                                                                | ✅ PASS     |
-| [Profile Detail](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10/)             |                                                                                                           |             |
+| [Profile Detail](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/1/)             |                                                                                                           |             |
 | GET Unauthenticated                                                          | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_unauth.png)         |
-| GET & PUT Authenticated                                                        | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_auth.png)           |
+| GET Authenticated                                                        | returns 200 response: the profile specified by id                                                           | ✅ PASS     | [Screenshot](docs/testing/Profiles_details_auth.png)           |
+| PUT Unauthenticated                                                        | returns 403 error: trying to edit profile specified by id as unauthenticated user                                                           | ✅ PASS     | [Screenshot](docs/testing/Profile_unauth_put_403.png)           |
 | POST, DELETE                                                            | Not provided                                                                                                | ✅ PASS     |                                                                      | ✅ PASS     |
-| _[ Profile](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/profiles/10/)_             |                                                                                                             |             |
-| GET Authenticated                                                            | returns 200 response: returns the profile of the requesting user                                            | ✅ PASS     | [Screenshot](docs/tests/authenticated-get-profiles-user.png)             |
-| GET Unauthenticated                                                          | returns 403 error                                                                                           | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-get-profiles-user.png)           |
-| PUT Authenticated                                                            | returns 200 response: allows authenticated users to update their profile                                    | ✅ PASS     | [Screenshot](docs/tests/authenticated-put-profiles-user.png)             |
-| PUT Unauthenticated                                                          | returns 403 error                                                                                           | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-put-profiles-user.png)           |
-| POST, DELETE                                                                 | Not provided                                                                                                | ✅ PASS     |
-| **Posts**                                                                    |                                                                                                             |             |                                                                          |
-| _[Post List](https://photora-api.herokuapp.com/posts)_                       |                                                                                                             |             |
+**Posts**                                                                    |                                                                                                            |             |                                                                          |
+| _[Post List](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/posts/)_                       |                                                                                                             |             |
 | GET Unauthenticated                                                          | returns 200 response: returns a list of all the posts                                                       | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-get-posts.png)                   |
 | GET Authenticated No Follow                                                  | returns 200 response: Filters out the posts from the requesting user                                        | ✅ PASS     | [Screenshot](docs/tests/authenticated-get-posts.png)                     |
 | GET Authenticated With Follow                                                | returns 200 response: Filters out the posts from the requesting user and from the profiles the user follows | ✅ PASS     | [Screenshot](docs/tests/authenticated-get-posts-follow.png)              |
 | POST Authenticated                                                           | returns 201 response: allows authenticated users to create posts                                            | ✅ PASS     | [Screenshot](docs/tests/authenticated-post-posts.png)                    |
 | POST Unauthenticated                                                         | returns 403 error                                                                                           | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-post-posts.png)                  |
 | PUT, DELETE                                                                  | Not provided                                                                                                | ✅ PASS     |
-| _[Post Detail](https://photora-api.herokuapp.com/posts/12)_                  |                                                                                                             |             |
+| _[Post Detail](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/posts/)_                  |                                                                                                             |             |
 | GET Unauthenticated                                                          | returns the post specified by id                                                                            | ✅ PASS     | [Screenshot](docs/tests/unauthenticated-get-posts-detail.png)            |
 | GET Authenticated                                                            | returns the post specified by id                                                                            | ✅ PASS     | [Screenshot](docs/tests/authenticated-get-posts-detail.png)              |
 | PUT Authenticated Owner                                                      | allows the owner to update the post                                                                         | ✅ PASS     | [Screenshot](docs/tests/authenticated-owner-put-posts-detail.png)        |
@@ -337,7 +334,7 @@ Images from the deployed api and the admin django panel can be found [here](#dep
 | POST                                                                         | Not provided                                                                                                | ✅ PASS     |
 -->
 
-## Deployed Screens
+## Deployed admin Screens
 
 <details>
 <summary><b>Django admin panel</b></summary>
@@ -436,6 +433,7 @@ Images from the deployed api and the admin django panel can be found [here](#dep
 </summary>
 </details>
 
+## Validation
 CI Python Linter was also used in parallel with the development of the API, to keep the code free of errors.
 
 <!-- The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development. Test Commits were exectuted in attempts to test the responsivness with the Front and the deployed Back-end. -->
