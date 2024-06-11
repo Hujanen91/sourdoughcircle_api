@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Category
 
 class CategorySerializer(serializers.ModelSerializer):
-    
+    """Serializes Category model (id, name, created_at) for API."""
     class Meta:
         model = Category
         fields = ['id', 'name', 'created_at']
