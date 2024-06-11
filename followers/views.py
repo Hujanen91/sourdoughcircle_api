@@ -6,6 +6,12 @@ from followers.models import Follower
 from followers.serializers import FollowerSerializer
 
 class FollowerList(generics.ListCreateAPIView):
+    """
+    List or create follower relationships.
+
+    - GET: Lists all followers.
+    - POST: Creates a new follower relationship.
+    """
     serializer_class = FollowerSerializer
     queryset = Follower.objects.all()
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -26,6 +32,13 @@ class FollowerDetail(generics.RetrieveDestroyAPIView):
 
 
 class FollowedPostsList(generics.ListAPIView):
+    """
+    Lists posts from followed users.
+
+    Requires authentication.
+
+    - GET: Lists posts from users followed by the authenticated user.
+    """
     serializer_class = PostSerializer
     permission_classes = [permissions.IsAuthenticated]
 

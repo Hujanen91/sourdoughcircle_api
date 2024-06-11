@@ -1,7 +1,7 @@
 from django.db.models import Count
-from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
+from rest_framework import generics, permissions, filters
 from .models import Post, Category
 from .serializers import PostSerializer
 
@@ -39,6 +39,9 @@ class PostList(generics.ListCreateAPIView):
     ]
 
     def perform_create(self, serializer):
+        """
+        Performs creation of a new post.
+        """
         category_name = self.request.data.get('category', None)
         if category_name:
             category = Category.objects.get(name=category_name)

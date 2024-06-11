@@ -4,12 +4,12 @@ from django.contrib.auth.models import User
 
 class Follower(models.Model):
     """
-    Follower model, related to 'owner' and 'followed'.
-    'owner' is a User that is following a User.
-    'followed' is a User that is followed by 'owner'.
-    We need the related_name attribute so that django can differentiate.
-    between 'owner' and 'followed' who both are User model instances.
-    'unique_together' makes sure a user can't 'double follow' the same user.
+    Represents a follower relationship between users.
+
+    Attributes:
+        owner (ForeignKey): The user following another user.
+        followed (ForeignKey): The user being followed.
+        created_at (DateTimeField): Date and time of creation.
     """
     owner = models.ForeignKey(
         User, related_name='following', on_delete=models.CASCADE

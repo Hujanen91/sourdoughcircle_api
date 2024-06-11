@@ -4,6 +4,9 @@ from likes.models import Like
 from category.models import Category
 
 class PostSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Post model.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
@@ -21,6 +24,13 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
     def validate_image(self, value):
+        """
+        Validates the image size and dimensions.
+
+        Raises:
+            serializers.ValidationError: 
+            If image size or dimensions exceed the limits.
+        """
         if value.size > 2 * 1024 * 1024:
             raise serializers.ValidationError('Image size larger than 2MB!')
         if value.image.height > 4096:
@@ -34,10 +44,18 @@ class PostSerializer(serializers.ModelSerializer):
         return value
 
     def get_is_owner(self, obj):
+        """
+        Determines if the current user 
+        is the owner of the post.
+        """
         request = self.context['request']
         return request.user == obj.owner
 
     def get_like_id(self, obj):
+        """
+        Retrieves the ID of the like 
+        associated with the post, if any.
+        """
         user = self.context['request'].user
         if user.is_authenticated:
             like = Like.objects.filter(
@@ -47,6 +65,10 @@ class PostSerializer(serializers.ModelSerializer):
         return None
     
     def get_category_name(self, obj):
+        """
+        Retrieves the name of the category 
+        associated with the post, if any.
+        """
         return obj.category.name if obj.category else None
 
     class Meta:
