@@ -66,10 +66,10 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),
                  'localhost',
-                 '8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu114.gitpod.io',
+                 '8000-hujanen91-sourdoughcirc-o20yc9srjn6.ws.codeinstitute-ide.net',
     ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-jpubmb1737z.ws-eu114.gitpod.io','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-o20yc9srjn6.ws.codeinstitute-ide.net','https://*.127.0.0.1']
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #EMAIL_HOST = 'smtp-mail.outlook.com'
@@ -115,6 +115,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
