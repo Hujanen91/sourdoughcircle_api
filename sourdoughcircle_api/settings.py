@@ -14,10 +14,7 @@ from pathlib import Path
 import os
 import re
 import dj_database_url
-#import mimetypes
 
-# Code to make css load in adminportal in browser
-#mimetypes.add_type("text/javascript", ".js", True)
 
 if os.path.exists('env.py'):
     import env
@@ -115,10 +112,10 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
@@ -131,7 +128,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE
     ).group(0)
     CORS_ALLOWED_ORIGIN_REGEXES = [
-        rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
+        rf"{extracted_url}.*\.codeinstitute-ide\.net$",
     ]
     
 CORS_ALLOW_CREDENTIALS = True
