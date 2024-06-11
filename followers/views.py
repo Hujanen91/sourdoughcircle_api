@@ -5,6 +5,7 @@ from posts.serializers import PostSerializer
 from followers.models import Follower
 from followers.serializers import FollowerSerializer
 
+
 class FollowerList(generics.ListCreateAPIView):
     """
     List or create follower relationships.
@@ -15,7 +16,7 @@ class FollowerList(generics.ListCreateAPIView):
     serializer_class = FollowerSerializer
     queryset = Follower.objects.all()
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    
+
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
@@ -44,5 +45,7 @@ class FollowedPostsList(generics.ListAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        followed_users = Follower.objects.filter(owner=user).values_list('followed', flat=True)
-        return Post.objects.filter(owner__in=followed_users).order_by('-created_at')
+        followed_users = Follower.objects.filter(
+            owner=user).values_list('followed', flat=True)
+        return Post.objects.filter(
+                owner__in=followed_users).order_by('-created_at')
