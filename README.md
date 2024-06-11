@@ -92,58 +92,58 @@ Throughout the development process, new milestones were added, where tasks start
 ### `Must-Have`:<br>
 Follow/Unfollow [#17](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/17)<br>
 Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)<br>
-Authentication: Sign up [#8]()<br>
-Authentication: Sign in [#9]()<br>
-Authentication: Refreshing access tokens [#10]()<br>
-Routing [#11]()<br>
-Navigation: Conditional rendering [#13]()<br>
-Edit profile [#14]()<br>
-Update username and profile [#16]()<br>
-Edit post [#18]()<br>
-Create a comment [#19]()<br>
-Create posts [#20]()<br>
-Post page [#21]()<br>
-View recent posts [#28]()<br>
-Like a post [#29]()<br>
-Delete comments [#32]()<br>
-View comments [#33]()<br>
-View a post [#35]()<br>
-Navigation [#36]()<br>
+Authentication: Sign up [#8](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/8)<br>
+Authentication: Sign in [#9](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/9)<br>
+Authentication: Refreshing access tokens [#10](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/10)<br>
+Routing [#11](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/11)<br>
+Navigation: Conditional rendering [#13](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/13)<br>
+Edit profile [#14](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/14)<br>
+Update username and profile [#16](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/16)<br>
+Edit post [#18](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/18)<br>
+Create a comment [#19](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/19)<br>
+Create posts [#20](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/20)<br>
+Post page [#21](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/21)<br>
+View recent posts [#28](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/28)<br>
+Like a post [#29](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/29)<br>
+Delete comments [#32](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/32)<br>
+View comments [#33](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/33)<br>
+View a post [#35](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/35)<br>
+Navigation [#36](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/36)<br>
 
 ### `Should-Have`:<br>
-User profile stats [#12]()<br>
-View specific users posts [#15]()<br>
-Profile page [#7]()<br>
-Basic profile information [#22]()<br>
-View liked posts [#23]()<br>
-Avatar [#26]()<br>
-Comment date [#27]()<br>
-View posts of followed users [#30]()<br>
-Infinite scroll [#31]()<br>
-Search posts [#34]()<br>
+User profile stats [#12](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/12)<br>
+View specific users posts [#15](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/15)<br>
+Profile page [#7](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/7)<br>
+Basic profile information [#22](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/22)<br>
+View liked posts [#23](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/23)<br>
+Avatar [#26](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/26)<br>
+Comment date [#27](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/27)<br>
+View posts of followed users [#30](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/30)<br>
+Infinite scroll [#31](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/31)<br>
+Search posts [#34](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/34)<br>
 Social media links in profile [#39]()<br>
 Follow/Unfollow [#17](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/17)<br>
 Edit a comment [#25](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/25)<br>
-Admin - Respond to user mail [#40]()<br>
-Contactpage [#38]()<br>
+Admin - Respond to user mail [#40](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/40)<br>
+Contactpage [#38](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/38)<br>
 
 ### `Could-Have`:<br>
-Contactpage [#38]()<br>
-Replying to comments [#44]()<br>
-User - Email communication [#41]()<br>
-Admin - Email communication [#42]()<br>
-Notifications [#43]()<br>
-Most followed profiles [#24]()<br>
-Categories [#37]()<br>
-Most liked posts [#45]()<br>
+Contactpage [#38](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/38)<br>
+Replying to comments [#44](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/44)<br>
+User - Email communication [#41](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/41)<br>
+Admin - Email communication [#42](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/42)<br>
+Notifications [#43](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/43)<br>
+Most followed profiles [#24](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/24)<br>
+Categories [#37](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/37)<br>
+Most liked posts [#45](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/45)<br>
 
 ### `Wont-Have` & `Future implementation`:<br>
-Replying to comments [#44]()<br>
-User - Email communication [#41]()<br>
-Admin - Email communication [#42]()<br>
-Notifications [#43]()<br>
-Admin - Respond to user mail [#40]()<br>
-Community chat [#46]()<br>
+Replying to comments [#44](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/44)<br>
+User - Email communication [#41](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/41)<br>
+Admin - Email communication [#42](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/42)<br>
+Notifications [#43](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/43)<br>
+Admin - Respond to user mail [#40](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/40)<br>
+Community chat [#46](https://github.com/Hujanen91/sourdoughcircle_frontend/issues/46)<br>
 
 
 <b>The issues were closed and the milestones subsequently too.</b>
