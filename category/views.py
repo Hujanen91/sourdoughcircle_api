@@ -5,6 +5,7 @@ from rest_framework import generics, permissions
 from .models import Category
 from .serializers import CategorySerializer, CategoryDetailSerializer
 
+
 class CategoryList(generics.ListAPIView):
     """
     API view to list all categories.
@@ -16,8 +17,8 @@ class CategoryList(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['name']
-    
-    
+
+
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     API view to retrieve, update, or delete a category by id.
