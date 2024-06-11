@@ -4,6 +4,9 @@ from followers.models import Follower
 
 
 class ProfileSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Profile model.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
@@ -12,10 +15,18 @@ class ProfileSerializer(serializers.ModelSerializer):
     following_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
+        """
+        Determines if the current user 
+        is the owner of the profile.
+        """
         request = self.context['request']
         return request.user == obj.owner
 
     def get_following_id(self, obj):
+        """
+        Retrieves the ID of the 
+        follow relationship, if any.
+        """
         user = self.context['request'].user
         if user.is_authenticated:
             following = Follower.objects.filter(
