@@ -1,6 +1,6 @@
-from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
 from sourdoughcircle_api.permissions import IsOwnerOrReadOnly
+from rest_framework import generics, permissions
 from .models import Comment
 from .serializers import CommentSerializer, CommentDetailSerializer
 
