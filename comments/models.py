@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 from posts.models import Post
 
 
@@ -18,4 +17,4 @@ class Comment(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"{self.owner} : {self.content} || Comment posted: {self.created_at}"
+        return f"{self.owner} : {self.content} || Posted: {self.created_at}"
