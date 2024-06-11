@@ -2,6 +2,7 @@ from rest_framework import generics, permissions
 from .models import Contact
 from .serializers import ContactSerializer
 
+
 class ContactList(generics.ListCreateAPIView):
     """
     API view to list or create contacts.
@@ -12,7 +13,7 @@ class ContactList(generics.ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
     permission_classes = [permissions.AllowAny]
-    
+
 
 class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
     """

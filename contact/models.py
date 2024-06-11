@@ -6,7 +6,7 @@ class Contact(models.Model):
     Model to handle the contact form
     submission.
     The model also handles a response field
-    for the admin on the admin side so they 
+    for the admin on the admin side so they
     can answer members messages directly on
     the admin website.
     """
@@ -17,10 +17,9 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
     admin_response = models.TextField(blank=True, null=True)
-    
-    
+
     class Meta:
         ordering = ["-created_at"]
-    
+
     def __str__(self):
-        return f"Message from {self.name} || Message recieved: {self.created_at}"
+        return f"From {self.name} || Recieved: {self.created_at}"
