@@ -367,9 +367,22 @@ Images from the deployed api and the admin django panel can be found below in th
 ## Validation
 CI Python Linter was also used in parallel with the development of the API, to keep the code free of errors.
 
-<!-- The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development. Test Commits were exectuted in attempts to test the responsivness with the Front and the deployed Back-end. -->
+The Code has not exhibited apparent errors after consecutive tests and corrections throughout the development.
+Minor errors was appearing in the validation but was simple to resolve:
 
-<img src="" alt="CI Python Linter">
+<b>W291 trailing whitespace</b> - removed whitespace to resolve errror<br>
+<b>W292 no newline at end of file</b> - added new line to resolve<br>
+<b>W293 blank line containse whitespace</b> - removed whitespaces to resolve errors<br>
+<b>E275 missing whitepace after keyword</b> - added whitespace to resolve<br>
+<b>E231 missing whitespace after ','</b> - added whitespace to resolve<br>
+<b>E201 whitespace after '{'</b> - removed whitespace to resolve error<br>
+<b>E202 whitespace before '}'</b> - removed whitespace to resolve error<br>
+<b>E501 line too long</b> - shortened string/removed whitespace/shortened the code to resolve<br>
+
+
+After solving the minor errors above all python code in all apps are now All clear and without errors:
+
+ ![Python validation](docs/validation/Python_validation_allclear.png)
 
 ## Future Improvements
 <b>Communication with user and admin:</b><br>
@@ -381,6 +394,9 @@ A community live chat displayed at all times on all pages of the website could b
 
 <b>Bookmarks:</b><br>
 To make it easier for the user to save posts they like.
+
+<b>Easier communication via contact form:</b><br>
+Work on making the admin response fully functional to make the communication easier and faster. One solutions would be to add a page to the frontend for only admins where they can handle messages and contact with users directly in the fronend when logged in.
 
 <b>Direct message:</b><br>
 A fun way to communicate with other users, could also be used for easier communication with the admins instead of using direct emails.
