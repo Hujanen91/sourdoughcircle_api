@@ -11,7 +11,8 @@ def root_route(request):
     return Response({
         "message": "Welcome to my SourdoughCircle API!"
     })
-    
+
+
 # dj-rest-auth logout view fix
 @api_view(['POST'])
 def logout_route(request):

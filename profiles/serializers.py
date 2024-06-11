@@ -16,7 +16,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         """
-        Determines if the current user 
+        Determines if the current user
         is the owner of the profile.
         """
         request = self.context['request']
@@ -24,7 +24,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     def get_following_id(self, obj):
         """
-        Retrieves the ID of the 
+        Retrieves the ID of the
         follow relationship, if any.
         """
         user = self.context['request'].user
@@ -32,15 +32,15 @@ class ProfileSerializer(serializers.ModelSerializer):
             following = Follower.objects.filter(
                 owner=user, followed=obj.owner
             ).first()
-            # print(following)
             return following.id if following else None
         return None
 
     class Meta:
         model = Profile
         fields = [
-            'id', 'owner', 'created_at', 'updated_at', 'name',
-            'content', 'image', 'facebook_link',
-            'twitter_link', 'linkedin_link','is_owner', 
-            'following_id', 'posts_count', 'followers_count', 'following_count',
+            'id', 'owner', 'created_at', 'updated_at',
+            'name', 'content', 'image', 'facebook_link',
+            'twitter_link', 'linkedin_link', 'is_owner',
+            'following_id', 'posts_count',
+            'followers_count', 'following_count',
         ]
