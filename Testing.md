@@ -1,7 +1,7 @@
-# <h1> Manual testing </h1>
+<a name="Top"></a>
+<h1> Manual testing </h1>
 
-
-[Back to readme](/README.md#Manual-Testing)
+[Back to Readme](README.md#manual-testing)
 
 Manual Testing for the overall functionality of the API was performed by entering dummy data in the backend both via Backend-and Front-end.
 All data is CRUDed accordingly.
@@ -114,6 +114,6 @@ Images from the deployed api and the admin django panel can be found [here](#dep
 | POST                                                                         | Not provided                                                                                                | ✅ PASS     |
 
 
-[Back to top](#manual-testing)<br>
+[Back to top](#Top)<br>
 
-[Back to Readme](/README.md#Manual-Testing)
+[Back to Readme](README.md#manual-testing)
