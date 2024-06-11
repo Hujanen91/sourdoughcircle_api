@@ -42,8 +42,10 @@ The repository for the frontend of the application can be found here:<br>[Sourdo
 ## Live Page
 [SourdoughCircle API](https://sourdoughcircle-api-382dc0f20c45.herokuapp.com/)
 
+In development:
 ![API Preview](docs/images/screenshots/API-preview.png)
-
+Deployed version:
+![API Preview](docs/testing/Deployed-start.png)
 
 # Planning and Agile
 
