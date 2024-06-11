@@ -3,6 +3,7 @@ from posts.models import Post
 from likes.models import Like
 from category.models import Category
 
+
 class PostSerializer(serializers.ModelSerializer):
     """
     Serializer for the Post model.
@@ -15,7 +16,7 @@ class PostSerializer(serializers.ModelSerializer):
     likes_count = serializers.IntegerField(read_only=True)
     comments_count = serializers.IntegerField(read_only=True)
     category_name = serializers.ReadOnlyField(source='category.name')
-    
+
     category = serializers.SlugRelatedField(
         queryset=Category.objects.all(),
         slug_field='name',
@@ -28,7 +29,7 @@ class PostSerializer(serializers.ModelSerializer):
         Validates the image size and dimensions.
 
         Raises:
-            serializers.ValidationError: 
+            serializers.ValidationError:
             If image size or dimensions exceed the limits.
         """
         if value.size > 2 * 1024 * 1024:
@@ -45,7 +46,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         """
-        Determines if the current user 
+        Determines if the current user
         is the owner of the post.
         """
         request = self.context['request']
@@ -53,7 +54,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_like_id(self, obj):
         """
-        Retrieves the ID of the like 
+        Retrieves the ID of the like
         associated with the post, if any.
         """
         user = self.context['request'].user
@@ -63,10 +64,10 @@ class PostSerializer(serializers.ModelSerializer):
             ).first()
             return like.id if like else None
         return None
-    
+
     def get_category_name(self, obj):
         """
-        Retrieves the name of the category 
+        Retrieves the name of the category
         associated with the post, if any.
         """
         return obj.category.name if obj.category else None
