@@ -64,6 +64,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'),
                  'localhost',
                  '8000-hujanen91-sourdoughcirc-o20yc9srjn6.ws.codeinstitute-ide.net',
+                 'sourdoughcircle-api-382dc0f20c45.herokuapp.com',
     ]
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-hujanen91-sourdoughcirc-o20yc9srjn6.ws.codeinstitute-ide.net','https://*.127.0.0.1']
